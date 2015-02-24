@@ -160,7 +160,6 @@ ClientBin/
 node_modules/
 FirmaFakturka/obj
 FirmaFakturka/bin
-FirmaFakturka/Properties
 
 # RIA/Silverlight projects
 Generated_Code/
