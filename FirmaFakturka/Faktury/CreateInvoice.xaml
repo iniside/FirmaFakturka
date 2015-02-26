@@ -1,0 +1,87 @@
+﻿<Window 
+    x:Class="FirmaFakturka.Faktury.CreateInvoice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:custns="clr-namespace:FirmaFakturka.Faktury"
+        Title="CreateInvoice" Height="421" Width="791">
+    <Window.Resources>
+        <custns:InvoiceViewModel x:Key="InvoiceObj"/>
+    </Window.Resources>
+    <Grid>
+        <Grid ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" MinWidth="160" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="28" />
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Content="Data Wystawienia" VerticalAlignment="Top"/>
+                <DatePicker Grid.Column="1" ToolTip="Wybierz date wystawienia faktury." SelectedDateFormat="Long" Text="Data wystawienia" />
+                
+            </Grid>
+            <Label Grid.Column="0" Grid.Row="0" Content="NIP" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <TextBox Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" 
+                     Text="{Binding NIP}"/>
+
+            <Label Grid.Column="0" Grid.Row="1" Content="Firma" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <TextBox Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" />
+
+            <Label Grid.Column="0" Grid.Row="2" Content="Imię" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <TextBox Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" />
+
+            <Label Grid.Column="0" Grid.Row="3" Content="Nazwisko" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <TextBox Grid.Column="1" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" />
+
+            <Label Grid.Column="0" Grid.Row="4" Content="Adres" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <TextBox Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" />
+
+            <Label Grid.Column="0" Grid.Row="5" Content="Kod" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <TextBox Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" />
+
+            <Label Grid.Column="0" Grid.Row="6" Content="Miasto" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <TextBox Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" />
+
+            <Label Grid.Column="0" Grid.Row="7" Content="Email" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <TextBox Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" />
+
+            <Label Grid.Column="0" Grid.Row="8" Content="Telefon" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <TextBox Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" />
+
+            <Label Grid.Column="0" Grid.Row="9" Content="Telefon Kom" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <TextBox Grid.Column="1" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" />
+            
+            <Button Grid.Column="1" Grid.Row="10" Content="Podgląd" Click="Button_Click" Command="{Binding btnClick, Mode=OneWay, Source={StaticResource InvoiceObj}}"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -3,6 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Menu IsMainMenu="True" Height="20" Margin="0" VerticalAlignment="Top">
+            <MenuItem Header="Faktury" Click="MenuItem_Click">
+                <MenuItem Header="Wystaw Fakture"></MenuItem>
+            </MenuItem>
+        </Menu>
+
     </Grid>
 </Window>

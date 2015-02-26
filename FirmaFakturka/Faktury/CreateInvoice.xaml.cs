@@ -10,31 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using FirmaFakturka.Faktury;
 
-namespace FirmaFakturka
+namespace FirmaFakturka.Faktury
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CreateInvoice.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CreateInvoice : Window
     {
-        public MainWindow()
+        public CreateInvoice()
         {
             InitializeComponent();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var createInvoice = new CreateInvoice();
-            createInvoice.Show();
-        }
-
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            var previewInvoice = new ReviewInvoice();
+            previewInvoice.Show();
         }
     }
 }
