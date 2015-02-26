@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FirmaFakturka.Faktury;
+using FirmaFakturka.Model;
 
 namespace FirmaFakturka
 {
@@ -24,6 +25,14 @@ namespace FirmaFakturka
         public MainWindow()
         {
             InitializeComponent();
+            this.Loaded += MainWindow_Loaded;
+        }
+
+        public void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            FirmaContext ctx = new FirmaContext();
+            //ChinookEntities ent = new ChinookEntities();
+            this.testGrid.ItemsSource = ctx.Clients.ToList();
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

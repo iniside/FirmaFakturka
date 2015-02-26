@@ -8,6 +8,7 @@
                 <MenuItem Header="Wystaw Fakture"></MenuItem>
             </MenuItem>
         </Menu>
+        <DataGrid x:Name="testGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="163,119,0,0" VerticalAlignment="Top" Height="108" Width="216" SelectionChanged="DataGrid_SelectionChanged"/>
 
     </Grid>
 </Window>
