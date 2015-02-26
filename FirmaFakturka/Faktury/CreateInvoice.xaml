@@ -38,7 +38,7 @@
                 </Grid.RowDefinitions>
                 <Label Grid.Column="0" Grid.Row="0" Content="Data Wystawienia" VerticalAlignment="Top"/>
                 <DatePicker Grid.Column="1" ToolTip="Wybierz date wystawienia faktury." SelectedDateFormat="Long" Text="Data wystawienia" />
-                
+
             </Grid>
             <Label Grid.Column="0" Grid.Row="0" Content="NIP" VerticalAlignment="Top" HorizontalAlignment="Right"/>
             <TextBox Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Stretch" 
@@ -80,8 +80,9 @@
             <Label Grid.Column="0" Grid.Row="9" Content="Telefon Kom" VerticalAlignment="Top" HorizontalAlignment="Right"/>
             <TextBox Grid.Column="1" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Stretch" 
                                  VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Padding="5" Width="160" />
-            
+
             <Button Grid.Column="1" Grid.Row="10" Content="Podgląd" Click="Button_Click" Command="{Binding btnClick, Mode=OneWay, Source={StaticResource InvoiceObj}}"/>
+            <Button Content="Dodaj z bazy" Grid.Column="2" HorizontalAlignment="Left" Margin="10,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="105" Height="29" Grid.RowSpan="2" Click="Button_Click_1"/>
         </Grid>
     </Grid>
 </Window>

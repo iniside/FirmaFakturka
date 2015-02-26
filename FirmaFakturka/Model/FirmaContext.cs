@@ -9,11 +9,12 @@ namespace FirmaFakturka.Model
 {
     class FirmaContext : DbContext
     {
-        static FirmaContext()
+        public FirmaContext()
+            : base("FirmaContext")
         {
             Database.SetInitializer<FirmaContext>(new DbInitializer());
-            using (FirmaContext ctx = new FirmaContext())
-                ctx.Database.Initialize(false);
+           // using (FirmaContext ctx = new FirmaContext())
+          //      ctx.Database.Initialize(false);
         }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Invoice> Invoices { get; set; }

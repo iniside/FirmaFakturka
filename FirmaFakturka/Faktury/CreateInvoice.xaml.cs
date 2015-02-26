@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirmaFakturka.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,15 @@ namespace FirmaFakturka.Faktury
         {
             var previewInvoice = new ReviewInvoice();
             previewInvoice.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var addClientFromList = new AddClientFromList();
+            FirmaContext ctx = new FirmaContext();
+
+            addClientFromList.ListOfClients.ItemsSource = ctx.Clients.ToList();
+            addClientFromList.Show();
         }
     }
 }

@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FirmaFakturka.Faktury;
 using FirmaFakturka.Model;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace FirmaFakturka
 {
@@ -30,9 +32,9 @@ namespace FirmaFakturka
 
         public void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            FirmaContext ctx = new FirmaContext();
+            //FirmaContext ctx = new FirmaContext();
             //ChinookEntities ent = new ChinookEntities();
-            this.testGrid.ItemsSource = ctx.Clients.ToList();
+           // this.testGrid.ItemsSource = ctx.Clients.ToList();
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -46,4 +48,40 @@ namespace FirmaFakturka
 
         }
     }
+
+    class ClientViewModel : INotifyPropertyChanged
+    {
+        private FirmaContext ctx;// = new FirmaContext();
+
+        public ClientViewModel()
+        {
+            ctx = new FirmaContext();
+        }
+        private string _clientName;
+        public string ClientName
+        {
+            get { return _clientName; }
+            set 
+            {
+                _clientName = value;
+            }
+        }
+
+        public List<Client> Clients
+        {
+            get { return ctx.Clients.ToList(); }
+        }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            if(PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+
 }

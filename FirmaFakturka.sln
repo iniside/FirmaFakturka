@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirmaFakturka", "FirmaFakturka\FirmaFakturka.csproj", "{7B91E491-E119-47B7-8FAF-477ECAB82709}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{7108C5BB-0CCA-4B8B-9796-CDEBDC6067E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7B91E491-E119-47B7-8FAF-477ECAB82709}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B91E491-E119-47B7-8FAF-477ECAB82709}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B91E491-E119-47B7-8FAF-477ECAB82709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7108C5BB-0CCA-4B8B-9796-CDEBDC6067E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7108C5BB-0CCA-4B8B-9796-CDEBDC6067E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7108C5BB-0CCA-4B8B-9796-CDEBDC6067E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7108C5BB-0CCA-4B8B-9796-CDEBDC6067E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
